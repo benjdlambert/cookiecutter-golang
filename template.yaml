@@ -15,7 +15,8 @@ spec:
   schema:
     required:
       - component_id
-      - use_typescript
+      - project_short_description
+      - docker_build_image_version
     properties:
       component_id:
         title: Name
