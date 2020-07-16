@@ -1,0 +1,33 @@
+apiVersion: backstage.io/v1alpha1
+kind: Template
+metadata:
+  name: golang-starter
+  title: Golang Microservice
+  description: A template that scaffolds a microservice written in go
+  tags:
+    - Experimental
+    - Go
+spec:
+  owner: web@example.com
+  templater: cookiecutter
+  type: service
+  path: "."
+  schema:
+    required:
+      - component_id
+      - use_typescript
+    properties:
+      component_id:
+        title: Name
+        type: string
+        description: Unique name of the component
+      project_short_description:
+        title: Description
+        type: string
+        description: Description of the component
+      docker_build_image_version:
+        title: Golang version
+        type: string
+        enum:
+          - "alpine"
+        default: alpine
